@@ -1,0 +1,20 @@
+<body style="margin: auto;">
+    <div class="container">
+       <h1>=== Cursos ===</h1>
+        <% for(i=0; i < dados.length; i++){ %>
+        <table>
+            <tr>
+                <td><%= dados[i].DESCRICAO %></td>
+            </tr> 
+            <% } %>
+        </table>
+
+        <form action="/cursos/salvar" method="post">
+            <input type="text" name="DESCRICAO"/>
+            <input type="hidden" name="CARGA_HORARIA" value="40" readonly="readonly" />
+            <input type="submit" value="Adicionar" class="btn btn-primary" />
+        </form>
+    </div>
+    
+    
+</body>

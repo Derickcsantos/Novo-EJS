@@ -1,0 +1,22 @@
+<body>
+    <div class="container">
+        <h1>=== Cursos ===</h1>
+        <% for(i=0; i < dados.length; i++){ %>
+        <table>
+            <tr>
+                <td style="width: 200px;"><%= dados[i].DESCRICAO %></td>
+                
+                    <a class="btn btn-success" href="/editar/<%=dados[i].ID%>">Edit</a>
+                    <a class="btn btn-danger delete" onclick="return confirm('Deseja excluir?')" href="/curso/Deletar/<%=dados[i].ID%>">Delete</a>
+                </td>
+            </tr> 
+            <% } %>
+        </table>
+    
+        <form action="/cursos/salvar" method="post">
+            <input type="text" name="DESCRICAO"/>
+            <input type="hidden" name="CARGA_HORARIA" value="40" readonly="readonly" />
+            <input type="submit" value="Adicionar" class="btn btn-primary" />
+        </form>
+    </div>
+</body>
