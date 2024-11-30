@@ -1,0 +1,8 @@
+create database crudnode;
+
+CREATE TABLE curso (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    DESCRICAO VARCHAR(255),
+    CARGA_HORARIA INT
+);
+
